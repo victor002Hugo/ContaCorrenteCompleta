@@ -16,4 +16,13 @@ public class PessoaFisica extends Cliente {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
+
+
+    private boolean validarCpf(String cpf) {
+        if (cpf.length() == 11) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
