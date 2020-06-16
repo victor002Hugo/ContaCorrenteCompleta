@@ -1,8 +1,14 @@
+import java.util.ArrayList;
+
 public abstract class Conta {
 
     private String numeroConta;
     private double saldoConta;
     private boolean contaAtiva;
+    private ArrayList<ContaCorrente>contasCorrentes;
+    private ArrayList<ContaEmpresarial>contasEmpresariais;
+    private ArrayList<ContaEspecial>contasEspeciais;
+    private ArrayList<ContaPoupanca>contasPoupancas;
 
 
     public Conta(String numeroConta, double saldoConta) {
@@ -72,11 +78,27 @@ public abstract class Conta {
         }
     }
 
-    public void consultarSaldo(){
-     //  System.out.println("O nome do Titular é: "+this.nomeUsuario);
-     //   System.out.println("A conta selecionada é: "+this.nroConta);
-     //   System.out.println("O CPF do titular da conta é: "+this.cpf);
-     //   System.out.println("Seu saldo é: "+this.saldo);
+    //Metodo para criar conta corrente
+    public void criarContaCorrente(String numeroConta,double saldoConta){
+        ContaCorrente contaCorrente = new ContaCorrente(numeroConta,saldoConta);
+        this.contasCorrentes.add(contaCorrente);
+    }
 
+    //Metodo para criar conta empresarial
+    public void criarContaEmpresarial(String numeroConta,double saldoConta){
+        ContaEmpresarial contaEmpresarial = new ContaEmpresarial(numeroConta,saldoConta);
+        this.contasEmpresariais.add(contaEmpresarial);
+    }
+
+    //Metodo para criar conta especial
+    public void criarContaEspecial(String numeroConta,double saldoConta){
+        ContaEspecial contaEspecial = new ContaEspecial(numeroConta,saldoConta);
+        this.contasEspeciais.add(contaEspecial);
+    }
+
+    //Metodo para criar conta poupanca
+    public void criarContaPoupanca(String numeroConta,double saldoConta){
+        ContaPoupanca contaPoupanca = new ContaPoupanca(numeroConta,saldoConta);
+        this.contasPoupancas.add(contaPoupanca);
     }
 }
