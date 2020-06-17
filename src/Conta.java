@@ -82,10 +82,19 @@ public  class Conta {
         }
     }
 
+
+
+
     //Metodo para criar conta corrente
-    public void criarContaCorrete(ContaCorrente contaCorrente){
+    public void criarContaCorrente(ContaCorrente contaCorrente){
         this.contasCorrentes.add(contaCorrente);
     }
+
+    //Metodo para remover conta corrente
+    public void removerContaCorrente(ContaCorrente contaCorrente){
+        this.contasCorrentes.remove(contaCorrente);
+    }
+
 
 
     //Metodo para criar conta empresarial
@@ -93,13 +102,39 @@ public  class Conta {
         this.contasEmpresariais.add(contaEmpresarial);
     }
 
+    //Metodo para remover conta empresarial
+    public  void removerContaEmpresarial(ContaEmpresarial contaEmpresarial){
+        this.contasEmpresariais.remove(contaEmpresarial);
+    }
+
+
+
     //Metodo para criar conta especial
     public void criarContaEspecial(ContaEspecial contaEspecial){
         this.contasEspeciais.add(contaEspecial);
     }
 
+    //Metodo para remover conta especial
+    public void removerContaEspecial(ContaEspecial contaEspecial){
+        this.contasEspeciais.remove(contaEspecial);
+    }
+
+
+
     //Metodo para criar conta poupanca
     public void criarContaPoupanca(ContaPoupanca contaPoupanca){
         this.contasPoupancas.add(contaPoupanca);
     }
+
+    //Metodo para remover conta poupanca
+    public void removerContaPoupanca(ContaPoupanca contaPoupanca){
+        this.contasPoupancas.remove(contaPoupanca);
+    }
+
+
+    public void listarContas(){
+        System.out.println(contasCorrentes);
+    }
+
+
 }
