@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public  class Conta {
+public abstract class Conta {
 
     private String numeroConta;
     private double saldoConta;

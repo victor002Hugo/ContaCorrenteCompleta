@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Cliente {
+public abstract class Cliente {
 
     private String nomeCliente;
     private String endereco;
@@ -8,7 +8,7 @@ public class Cliente {
     private ArrayList<PessoaFisica>pessoasFisicas;
     private ArrayList<PessoaJuridica>pessoasJuridicas;
 
-    public Cliente(String nomeCliente, String numeroConta, String endereco, String numeroContato) {
+    public Cliente(String nomeCliente, String endereco, String numeroContato) {
         this.nomeCliente = nomeCliente;
         this.endereco = endereco;
         this.numeroContato = numeroContato;
@@ -65,4 +65,5 @@ public class Cliente {
     public void removerPessoaJuridica(PessoaJuridica pessoaJuridica){
         this.pessoasJuridicas.remove(pessoaJuridica);
     }
+
 }
