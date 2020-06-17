@@ -6,6 +6,11 @@ public class Main {
 
         Scanner scan = new Scanner(System.in);
 
+        PessoaFisica pessoa1 = new PessoaFisica("","","","","");
+
+
+
+
 
     }
 }

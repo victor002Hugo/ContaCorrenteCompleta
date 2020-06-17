@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public abstract class Conta {
+public  class Conta {
 
     private String numeroConta;
     private double saldoConta;
@@ -15,6 +15,10 @@ public abstract class Conta {
         this.numeroConta = numeroConta;
         this.saldoConta = saldoConta;
         this.contaAtiva = true;
+        this.contasCorrentes = new ArrayList<ContaCorrente>();
+        this.contasEmpresariais = new ArrayList<ContaEmpresarial>();
+        this.contasPoupancas = new ArrayList<ContaPoupanca>();
+        this.contasEspeciais = new ArrayList<ContaEspecial>();
     }
 
     public String getNumeroConta() {
@@ -79,26 +83,23 @@ public abstract class Conta {
     }
 
     //Metodo para criar conta corrente
-    public void criarContaCorrente(String numeroConta,double saldoConta){
-        ContaCorrente contaCorrente = new ContaCorrente(numeroConta,saldoConta);
+    public void criarContaCorrete(ContaCorrente contaCorrente){
         this.contasCorrentes.add(contaCorrente);
     }
 
+
     //Metodo para criar conta empresarial
-    public void criarContaEmpresarial(String numeroConta,double saldoConta){
-        ContaEmpresarial contaEmpresarial = new ContaEmpresarial(numeroConta,saldoConta);
+    public void criarContaEmpresarial(ContaEmpresarial contaEmpresarial){
         this.contasEmpresariais.add(contaEmpresarial);
     }
 
     //Metodo para criar conta especial
-    public void criarContaEspecial(String numeroConta,double saldoConta){
-        ContaEspecial contaEspecial = new ContaEspecial(numeroConta,saldoConta);
+    public void criarContaEspecial(ContaEspecial contaEspecial){
         this.contasEspeciais.add(contaEspecial);
     }
 
     //Metodo para criar conta poupanca
-    public void criarContaPoupanca(String numeroConta,double saldoConta){
-        ContaPoupanca contaPoupanca = new ContaPoupanca(numeroConta,saldoConta);
+    public void criarContaPoupanca(ContaPoupanca contaPoupanca){
         this.contasPoupancas.add(contaPoupanca);
     }
 }
