@@ -7,4 +7,13 @@ public class ContaCorrente extends Conta {
         super(numeroConta, saldoConta);
         this.pessoaFisica = pessoaFisica;
     }
+
+    public void sacarContaCorrente(ContaCorrente contaCorrente,double valor){
+
+        if(valor<getSaldoConta()){
+            setSaldoConta(valor);
+        }else{
+            System.out.println("Valor incorreto");
+        }
+    }
 }

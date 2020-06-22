@@ -41,11 +41,13 @@ public abstract class Conta {
         return saldoConta;
     }
 
+    public void setSaldoConta(double saldoConta) {
+        this.saldoConta = saldoConta;
+    }
+
     public void desativaConta(){
         this.contaAtiva = false;
     }
-
-
     //Metodo para sacar da conta
     public boolean sacar(double valor){
         if(valor <= this.saldoConta){
@@ -57,6 +59,7 @@ public abstract class Conta {
             return false;
         }
     }
+
 
     //Metodo para depositar em uma conta
     public boolean depositar(double valor){
@@ -82,6 +85,15 @@ public abstract class Conta {
         }
     }
 
+    //Metodo para rendimento em conta popupanca
+
+    public void redimentoContaPoupanca(ContaPoupanca contaPoupanca){
+        double rendimento;
+        double saldoConta;
+        rendimento = this.saldoConta *0.05;
+        this.saldoConta = this.saldoConta + rendimento;
+        System.out.println("Seu novo saldo é: "+this.saldoConta);
+    }
 
 
 
